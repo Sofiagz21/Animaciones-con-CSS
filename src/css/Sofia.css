@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+
 html, body {
     margin: 0;
     padding: 0;
     display: flex;
     width: 100%;
     flex-direction: column;
+    background-color: #0092e6;
 }
 
 .container{
@@ -19,14 +23,27 @@ html, body {
     display: flex;
     width: 100%;
 }
-.tituloJuan{
+
+.tituloSofia{
     position: absolute;
+    font-family: 'Roboto', sans-serif;
     font-size: 40px;
-    margin: auto;
-    right: 50%;
+    color: #ffd140;
+    letter-spacing: 2px;
+    margin-top: 25px auto;
+    right: 75%;
     animation: ease;
     animation-name: slideinTitle;
     animation-duration: 3s;
+}
+
+@keyframes slideinTitle {
+    from {
+    right: 100%;
+    }
+    to {
+        right:75%;
+    }
 }
 
 .cabecera{
@@ -37,125 +54,63 @@ html, body {
     align-items: center;
 }
 
-.cubo-P{
-    display: flex;
-    width: 200px;
-    height: 200px;
-    background-color: aqua;
-    animation: ease-in-out;
-    animation-name: slidein;
-    animation-duration: 3s;
-    justify-content: center;
-    font-size: 40px;
-    align-items: flex-start;
-    
-}
-
-.cubo1{transition: width 2s, height 2s, background-color 2s,transform 5s, opacity 6s; }
-.cubo2{transition: width 2s, height 2s, background-color 2s,transform 5s,}
-
-
-
-.cubo1:hover{
-    background-color: burlywood;
-    width: 280px;
-    height: 280px;
-    transform: scale(0.5);
-    align-items: center;
-    opacity: 0;
-}
-
-.cubo2{
-    background-color: chartreuse;
-}
-
-.cubo2:hover{
-    background-color: burlywood;
-    width: 280px;
-    height: 280px;
-    transform: scale(1);
-    align-items: center;
-}
-
-.michi{
-    display: flex;
-    width: 50%;
-    height: auto;
-    animation: ease-in-out;
-    animation-name: "";
-    animation-iteration-count: infinite;
-    animation-duration: 1s;
-    transition: transform 3s;
-}
-
-.michi:hover{
-    transform:rotate(360deg) ;
-}
-
-.cubo3{
-animation-iteration-count: infinite;
-animation-name: temblar;
-animation-duration: 3s;
-}
-
 
 .Menu{
     display: flex;
     width: 90%;
     justify-content: center;
 }
+
+
 .Menu ul{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 25px 25px 35px 35px;
     width: min-content;
     height: min-content;
+    margin-top: 20px;
     justify-content: space-between;
     align-items: center;
     padding-inline-start: 0;
+    
 }
 
 .Menu ul li{
-    background-color: #A9ECFF;
-    display: flex;
+    background-color: #ffd140;
     align-items: center;
     list-style: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:'Roboto', sans-serif;
     font-size: 25px;
     width: auto;
     padding: 10px 15px;
-    margin: 10px;
+    margin: 10px 10px 10px 10px;
     height: 90%;
     border-radius: 20px;
-    border: 1px solid black;
     transition: border 2s, background-color 2s, box-shadow 3s;
 }
 
 .Menu ul li:hover{
-    background-color: rgb(194, 194, 245);
-    border: 3px solid blue;
+    background-color: #e0e768;
+    border: 1px solid #ffd140;
     box-shadow:4px 4px 14px 0px  rgba(224, 19, 19, 0.41);
 }
 
 /*  section de giros*/
 
-#Giros{
-    display: flex;
-    width: 99%;
-    height: auto;
-    justify-content: space-around;
-    border: 1px solid red;
-
-}
-
-.card{
-    display: flex;
-    width: 160px;
-    height: 160px;
-    align-items: center;
-    justify-content: center;
+h2{
+    margin-top: 30px;
+    color: #006;
+    font-size: 45px;
     text-align: center;
-    background-color: #A9ECFF;
-    margin: 20px;
+    font-family:'Roboto', sans-serif;
+    background-color: aliceblue;
+    padding: 1%;
+    width: auto;
+    border-radius: 15px;
+    margin-top: 50px;
 }
+
+
 .card2{
     display: flex;
     width: 160px;
@@ -165,12 +120,16 @@ animation-duration: 3s;
     justify-self: center;
     align-self: center;
     text-align: center;
-    background-color: #A9ECFF;
+    background-color: #e0e768;
     margin: 20px;
-    transition: transform;
+    font-family:'Roboto', sans-serif;
+    border-radius: 15px;
+    transition: transform 3s;
 }
 
-.transiciones{
+#transiciones, #giros{
+    overflow-x: hidden;
+    position: relative;
     display: grid;
     width: 99%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -179,28 +138,43 @@ animation-duration: 3s;
     grid-template-rows: auto;
     column-gap: 10px;
     row-gap: 15px;
-    border: 1px solid red;
+    border: 3px solid #004cc2;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+a{
+    text-decoration: none;
+    color:black
 }
 
 @media screen and (min-width:421px) and (max-width:800px) {
 
-    .transiciones{
+    #transiciones, #giros{
         grid-template-columns:1fr 1fr;
-
     }
 
+    .Menu ul{
+        grid-template-columns:1fr 1fr;
+        column-gap: 50px;
+        row-gap: 55px;
+    }
+
+    
 }
 @media screen and (min-width:375px) and (max-width:420px){
 
-    .transiciones{
+    .transiciones, .giros{
         grid-template-columns:1fr;
 
     }
 
+    .Menu ul{
+        grid-template-columns:1fr 1fr;
+        column-gap: 50px;
+        row-gap: 55px;
+    }
 }
-
-
-
 
 
 /* animacion */
@@ -212,14 +186,7 @@ animation-duration: 3s;
         margin-left: 0%;
     }
 }
-@keyframes slideinTitle {
-    from {
-    right: 100%;
-    }
-    to {
-        right:50%;
-    }
-}
+
 
 @keyframes slideup {
     from {
@@ -247,12 +214,153 @@ animation-duration: 3s;
 }
 
 
-/*Giros*/
+/*Transisiones*/
+.slideRight{
+    animation-name: llegadaDerecha;
+    animation-duration: 5s;
+ }
+
+ .slideLeft{
+    animation-name: llegadaIzquierda;
+    animation-duration: 5s;
+ }
+
+ .slideUp{
+    animation-name: llegadaArriba;
+    animation-duration: 5s;
+ }
+
+ .slideDown{
+    animation-name: llegadaAbajo;
+    animation-duration: 5s;
+ }
+
+/* animación llegada derecha*/
+
+@keyframes llegadaDerecha {
+    0%{
+        opacity: 0;
+        transform: translateX(1000px);
+    }
+    60%{
+        opacity: 0.6;
+       transform:translateX(-80px);
+    }
+    80%{
+        opacity: 0.8;
+        transform:translateX(15px);
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px);
+    }
+
+}
+
+/* animación llegada izquierda*/
+
+@keyframes llegadaIzquierda{
+    0%{
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+    60%{
+        opacity: 0.8;
+       transform:translateX(80px);
+    }
+    80%{
+        opacity: 0.9;
+        transform:translateX(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px);
+    }
+
+}
+
+/* animación llegada izquierda*/
+
+@keyframes llegadaArriba{
+    0%{
+        opacity: 0;
+        transform: translateY(-1000px);
+    }
+    60%{
+        opacity: 0.6;
+       transform:translateY(80px);
+    }
+    80%{
+        opacity: 0.9;
+        transform:translateY(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px);
+    }
+
+}
+
+
+/* animación llegada izquierda*/
+
+@keyframes llegadaAbajo{
+    0%{
+        opacity: 0;
+        transform: translateY(1000px);
+    }
+    60%{
+        opacity: 0.6;
+       transform:translateY(-80px);
+    }
+    80%{
+        opacity: 0.9;
+        transform:translateY(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform:translateX(0px);
+    }
+}
+
+/* Giros */
 
 .Giro_completo:hover{
-    transform: rotate(360deg);
+transform: rotate(360deg);
+ }
+
+ .Giro_completo_left:hover{
+    transform: rotate(-360deg);
+ }
+
+ .Giro_medio:hover{
+     transform: rotate(180deg);
+ }
+
+ .Giro_medio_derecha:hover{
+     transform: rotate(180deg);
+ }
+
+ .Giro_medio_izquierda:hover{
+     transform: rotate(-180deg);
+ }
+
+.Giro_infinito:hover{
+    animation-name: rotation;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
 }
 
-.Giro_completo_left:hover{
-    transform: rotate(-360deg);
-}
+@keyframes rotation {
+    0% {
+      transform:rotate(0deg);
+    }
+    100% {
+      transform:rotate(360deg);
+    }
+  }
+
+
+
+ 
