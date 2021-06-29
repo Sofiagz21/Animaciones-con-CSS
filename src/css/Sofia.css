@@ -419,3 +419,24 @@ transform: rotate(360deg);
          background: linear-gradient(0deg, rgba(46,127,135,1) 6%, rgba(176,43,43,1) 100%);
 }
 }
+
+.volver{
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  
+  .volver button{
+  margin: 0 10px ;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(68,123,190);
+  border-radius: 20px;
+  border: none;
+  margin: 20px 10px;
+  font-size: 15px;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  box-shadow: 2px 4px rgba(121, 135, 212, 0.4);
+  cursor: pointer;
+  }
