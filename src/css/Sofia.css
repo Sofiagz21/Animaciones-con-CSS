@@ -164,7 +164,7 @@ a{
 }
 @media screen and (min-width:375px) and (max-width:420px){
 
-    .transiciones, .giros{
+    .transiciones, .giros, .zoom{
         grid-template-columns:1fr;
 
     }
@@ -362,5 +362,60 @@ transform: rotate(360deg);
   }
 
 
+/*TRANSISIONES DE ZOOM*/
 
+ .Zoom{
+     display: grid;
+     grid-template-columns: repeat(2,1fr);
+     border: 1px solid red;
+     width: 60%;
+     column-gap: 10px;
+     row-gap: 15px;
+ }
  
+
+ .zoom_in:hover{
+    transform: scale(1.5);
+
+}
+.zoom_on:hover{
+    transform: scale(0.3);
+}
+
+/* ANIMACIÓN*/
+
+#animacion{
+    height: 250px;
+    width: 250px;
+    margin: 0 auto;
+    background-color: #4B4E81;
+    animation-name: animar;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; /* Punto de salida*/
+    animation-iteration-count: infinite;
+    box-shadow: 2px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes animar {
+    0%{ /* en el punto 0 empieza con ese color*/
+        transform: scale(.3);
+        background-color: #b02b2b;
+        border-radius: 100%;
+        transform:  translateX(-200px) rotateZ(0);
+        box-shadow: 2px 4px rgba(0,0,0,0.1)
+    }
+
+    50%{
+        background-color:#94B0B2;
+        transform: translateX(200px) rotateZ(180deg);
+        box-shadow: 2px 4px rgba(0,0,0,0.1)
+        
+    }
+
+    100%{
+        transform: translateX(0px) rotateZ(180deg);
+        transform: scale(1.2);
+        background: rgb(46,127,135);
+         background: linear-gradient(0deg, rgba(46,127,135,1) 6%, rgba(176,43,43,1) 100%);
+}
+}
