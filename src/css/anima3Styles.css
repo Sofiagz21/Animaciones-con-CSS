@@ -1,0 +1,98 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    animation: day2night 15s linear infinite;
+}
+
+/* ANIMACIÓN*/
+
+@keyframes day2night {
+    
+    0%{
+        background-color: #fff;
+    }
+    10%{
+        background-color: #fff;
+    }
+    50%{
+        background-color: #040c1a;
+    }
+    90%{
+        background-color: #fff;
+    }
+    100%{
+        background-color: #fff;
+    }
+}
+
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 720px;
+    height: 720px;
+    animation: animate 25s linear infinite;
+}
+
+/* ANIMACIÓN PARA EL CIRCLE*/
+@keyframes animate {
+
+     0%{
+        transform:translate(-50%,-50%) rotate(0deg)scale(.8);
+     }
+
+     100%{
+        transform:translate(-50%,-50%) rotate(-360deg)scale(.8);
+     }
+}
+
+
+.man{
+    width: 50%;
+    height: 2px;
+    background: transparent;
+    position: absolute;
+    top: calc(50% - 1px);
+    transform-origin: right;
+    animation: animateMan 10s linear infinite;
+}
+
+.man img{
+   transform: rotate(60deg) translateY(15px); 
+}
+
+@keyframes animateMan {
+
+    0%{
+       transform: rotate(0deg);
+    }
+
+    100%{
+       transform: rotate(360deg);
+    }
+}
+
+/* ESTILO DEL BOTÓN*/
+
+.volver{
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+button{
+  margin: 0 10px ;
+  width: 100px;
+  height: 50px;
+  background-color: rgb(68,123,190);
+  border-radius: 20px;
+  border: none;
+  margin: 20px 10px;
+  font-size: 15px;
+  color: white;
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  box-shadow: 2px 4px rgba(121, 135, 212, 0.4);
+  cursor: pointer;
+}

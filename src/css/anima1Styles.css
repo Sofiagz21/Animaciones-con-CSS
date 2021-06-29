@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Ruslan Display", cursive;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  background: rgb(68,123,190);
+    background: linear-gradient(0deg, rgba(68,123,190,1) 5%, rgba(62,107,176,1) 13%, rgba(50,74,148,1) 50%, rgba(43,55,132,1) 84%);
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+h1 {
+    font-size: 72px;
+    text-align: center;
+    color: #ffcc66;
+    text-shadow: 1px 1px 0 red;
+    margin-top: 0;
+    text-align: center;
+    z-index: 2;
+}
+
+
+/* ESTILOS PARA EL CONTAINER*/
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+  }
+  
+/* ESTILO PARA LAS IMAGEN*/
+
+  .container .spiderman {
+    width: 350px;
+    margin-top: 2px;
+    vertical-align: top;
+    animation-name: animar;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+
+  /* Animación para la imagen*/
+
+  @keyframes animar {
+    100% {
+      transform: translateY(-200px);
+    }
+  
+    0%{
+      transform: translateY(-80px);
+    }
+  }
+
+/* ESTILO PARA LA SOMBRA*/
+  .shadow {
+    width: 200px;
+    height: 20px;
+    margin: 5px 0;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    animation: sombra 2s alternate infinite;
+  }
+
+/* ANIMACIÓN PARA LA SOMBRA*/
+
+@keyframes sombra {
+    0% {
+      transform: scale(1);
+    }
+  
+    100% {
+      transform: scale(0.6);
+      opacity: 0.2;
+    }
+  }
+
+
+  /* BOTON VOLVER*/
+
+
+
+  .volver{
+      display: flex;
+      justify-content: flex-start;
+  }
+
+  button{
+    margin: 0 10px ;
+    width: 100px;
+    height: 50px;
+    background-color: rgb(68,123,190);
+    border-radius: 20px;
+    border: none;
+    font-size: 15px;
+    color: white;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
